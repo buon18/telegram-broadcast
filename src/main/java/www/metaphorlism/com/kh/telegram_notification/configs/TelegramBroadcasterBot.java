@@ -32,7 +32,9 @@ public class TelegramBroadcasterBot extends TelegramLongPollingBot {
         return botToken;
     }
     
-    public void broadcastMessage(String message) {
+    public void broadcastMessage(String chatId, String message) {
+        this.chatId = chatId;
+        
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText(message);
