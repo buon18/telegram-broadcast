@@ -16,8 +16,8 @@ public class TelegramBotConfig {
     private String chatId;
     
     @Bean
-    public TelegramBroadcasterBot setupTelegramBot() {
-        return new TelegramBroadcasterBot(botToken, botUsername, chatId);
+    public TelegramBroadcastBot setupTelegramBot() {
+        return new TelegramBroadcastBot(botToken, botUsername, chatId);
     }
 }
 

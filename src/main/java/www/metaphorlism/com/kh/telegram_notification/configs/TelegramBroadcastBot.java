@@ -5,13 +5,13 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-public class TelegramBroadcasterBot extends TelegramLongPollingBot {
+public class TelegramBroadcastBot extends TelegramLongPollingBot {
     
     private String botToken;
     private String botUsername;
     private String chatId;
     
-    public TelegramBroadcasterBot(String botToken, String botUsername, String chatId) {
+    public TelegramBroadcastBot(String botToken, String botUsername, String chatId) {
         this.botToken = botToken;
         this.botUsername = botUsername;
         this.chatId = chatId;

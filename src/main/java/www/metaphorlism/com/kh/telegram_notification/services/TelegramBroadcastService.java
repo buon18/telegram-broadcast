@@ -2,14 +2,14 @@ package www.metaphorlism.com.kh.telegram_notification.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import www.metaphorlism.com.kh.telegram_notification.configs.TelegramBroadcasterBot;
+import www.metaphorlism.com.kh.telegram_notification.configs.TelegramBroadcastBot;
 
 @Service
 public class TelegramBroadcastService {
     @Autowired
-    private TelegramBroadcasterBot telegramBroadcasterBot;
+    private TelegramBroadcastBot telegramBroadcastBot;
     
     public void sendNotification(String message) {
-        telegramBroadcasterBot.broadcastMessage(message);
+        telegramBroadcastBot.broadcastMessage(message);
     }
 }
