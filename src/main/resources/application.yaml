@@ -1,0 +1,11 @@
+server:
+  port: 8000
+
+spring:
+  application: telegram-broadcast
+
+telegram:
+  bot:
+    token: 'YOUR-BOT-TOKEN'
+    username: 'YOUR-BOT-USERNAME'
+  chat-id: 'YOUR-CHAT-ID'
