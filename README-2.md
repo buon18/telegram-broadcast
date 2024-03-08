@@ -1,4 +1,4 @@
-# Broadcast Notification To Telegram
+# Listen to events from Telegram Channels/Groups
 On our previous blog post, we had done configuring and implementing for broadcasting notifications to a specific channel/group.
 
 [Previous Blog](https://blogs.metaphorlism.com/blogs/65e44d29d39cf954960690a1)
