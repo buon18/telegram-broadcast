@@ -180,7 +180,7 @@ You can request to this API to retrieve the chat id
 In our next blog post, we will improve this application:
 - Handle the exception and send notification to a specific group/channel whenever the code runs into the Exceptions.
 - Create another endpoint to retrieve the ChatID by Group/Channel name.
-- Listen to any updates on the Telegram Group/Channel then handle the incoming requests.
+- [Listen to any updates on the Telegram Group/Channel then handle the incoming requests](https://blogs.metaphorlism.com/blogs/65eae81ed39cf954960690c7)
 
 **Stay tune and stay safe from 🪲🪲**
 
