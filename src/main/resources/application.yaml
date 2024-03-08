@@ -9,3 +9,4 @@ telegram:
     token: 'YOUR-BOT-TOKEN'
     username: 'YOUR-BOT-USERNAME'
   chat-id: 'YOUR-CHAT-ID'
+  base-url: https://api.telegram.org/bot

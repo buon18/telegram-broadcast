@@ -15,6 +15,9 @@ public class TelegramChatIdService {
     @Value("${telegram.bot.token}")
     private String botToken;
     
+    @Value("${telegram.base-url}")
+    private String baseUrl;
+    
     private final WebClient webClient;
     
     public TelegramChatIdService(WebClient.Builder webClientBuilder) {
@@ -22,11 +25,11 @@ public class TelegramChatIdService {
     }
     
     public Long getChatId(String chatName) {
-        String baseUrl = "https://api.telegram.org/bot" + botToken;
+        String url = baseUrl + botToken;
         
         return webClient
                 .get()
-                .uri(baseUrl + "/getUpdates")
+                .uri(url + "/getUpdates")
                 .retrieve()
                 .bodyToMono(String.class)
                 .map(response -> {
