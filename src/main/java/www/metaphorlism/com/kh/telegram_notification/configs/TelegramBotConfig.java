@@ -3,6 +3,9 @@ package www.metaphorlism.com.kh.telegram_notification.configs;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Configuration
 public class TelegramBotConfig {
@@ -16,8 +19,17 @@ public class TelegramBotConfig {
     private String chatId;
     
     @Bean
-    public TelegramBroadcasterBot setupTelegramBot() {
-        return new TelegramBroadcasterBot(botToken, botUsername, chatId);
+    public TelegramBroadcastBot setupTelegramBot() {
+        TelegramBroadcastBot telegramBot = new TelegramBroadcastBot(botToken, botUsername, chatId);
+    
+        try {
+            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            botsApi.registerBot(telegramBot);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+        
+        return telegramBot;
     }
 }
 
