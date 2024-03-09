@@ -9,7 +9,7 @@ public class TelegramBroadcastService {
     @Autowired
     private TelegramBroadcastBot telegramBroadcastBot;
     
-    public void sendNotification(String message) {
-        telegramBroadcastBot.broadcastMessage(message);
+    public void sendNotification(String chatId,String message) {
+        telegramBroadcastBot.broadcastMessage(chatId,message);
     }
 }
